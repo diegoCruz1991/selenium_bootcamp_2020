@@ -16,7 +16,8 @@ public class HandsOn4 {
         String searchBoxPath = "as_word";
         String searchButtonPath = "nav-search-btn";
         String postalCodePath = "//span[@class='andes-tooltip-button-close']";
-        String firstProductPath = "//*[contains(text(),'SelenioSelenium200Mcg90CapsulasAnticancerigenoEgS3')]";
+        String firstProductPath = "#item__image item__image--grid";
+                //*[contains(text(),'SelenioSelenium200Mcg90CapsulasAnticancerigenoEgS3')]";
 //ol[@id='searchResults']//li//div[@id='MLM770829615']";
 
 //li[@class='results-itemhighlightedarticlegriditem-info-height-185']/div[@class="rowItemitemhighlighteditem--gridnewto-item"]/div[@class="item__imageitem__image--grid"]
@@ -47,7 +48,7 @@ public class HandsOn4 {
 
         Thread.sleep(10000);
 
-        if (driver.findElement(By.id(firstProductPath)).isDisplayed()) {
+        if (driver.findElement(By.cssSelector(firstProductPath)).isDisplayed()) {
             System.out.println("Thefistproductispresent");
         } else {
             System.out.println("Thepathisnotpresent");
@@ -55,7 +56,7 @@ public class HandsOn4 {
 
         Thread.sleep(1000);
 
-        firstProduct = driver.findElement(By.className(firstProductPath));
+        firstProduct = driver.findElement(By.cssSelector(firstProductPath));
         firstProduct.sendKeys(Keys.ENTER);
 
         Thread.sleep(1000);
