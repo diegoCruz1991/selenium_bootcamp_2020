@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="81f0af43-90ce-4de2-ae3b-541060199e0e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/testngtest/src/test/resources/drivers/chromedriver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testngtest/src/test/resources/drivers/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/testngtest/src/test/resources/drivers/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testngtest/src/test/resources/drivers/geckodriver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testngtest/src/test/resources/drivers/geckodriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/testngtest/src/test/resources/drivers/geckodriver.exe" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1b2UwbHnLBGUr4RgqK8sBgqh5qX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/testngtest" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81f0af43-90ce-4de2-ae3b-541060199e0e" name="Default Changelist" comment="" />
+      <created>1587829921427</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587829921427</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="137" key="FileChooserDialogImpl" timestamp="1587830011188">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="463" y="137" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1587830011188" />
+  </component>
+</project>
