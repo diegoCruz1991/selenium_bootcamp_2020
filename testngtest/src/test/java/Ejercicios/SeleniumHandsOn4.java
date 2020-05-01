@@ -23,11 +23,11 @@ public class SeleniumHandsOn4 {
         assert driver.getCurrentUrl().equals("https://www.amazon.com.mx/") : "correct page";
 
         // ***** WEB ELEMENTS *****
-        Thread.sleep(10000);
-
-        WebElement search_bar = driver.findElement(By.id("twotabsearchtextbox"));
+        WebElement search_bar;
 
         //Test Steps
+        Thread.sleep(10000);
+        search_bar = driver.findElement(By.id("twotabsearchtextbox"));
         search_bar.sendKeys("Selenium");
         search_bar.submit();
 

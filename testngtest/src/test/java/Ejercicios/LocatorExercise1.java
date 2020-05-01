@@ -27,6 +27,8 @@ public class LocatorExercise1 {
         // ***** WEB ELEMENTS *****
         WebElement search_bar = driver.findElement(By.name("as_word"));
         WebElement search_button = driver.findElement(By.className("nav-icon-search"));
+        List<WebElement> results_list;
+        WebElement first_result;
 
         // ***** TEST STEPS *****
 
@@ -37,9 +39,9 @@ public class LocatorExercise1 {
         Thread.sleep(1000);
 
         //Create a list of Search results
-        List<WebElement> results_list = driver.findElements(By.className("main-title"));
+        results_list = driver.findElements(By.className("main-title"));
         //First Result in the list
-        WebElement first_result = results_list.get(0);
+        first_result = results_list.get(0);
         first_result.click();
 
         //Set a Wait time

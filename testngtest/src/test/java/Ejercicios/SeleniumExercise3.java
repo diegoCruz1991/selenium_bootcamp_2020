@@ -6,7 +6,7 @@ import java.io.File;
 
 public class SeleniumExercise3 {
     public static void main(String[] args) throws InterruptedException {
-        //Define Chrome geckoDriver location
+        //Define ChromeDriver location
         File chromeDriver_path = new File("src/test/resources/drivers/chromedriver.exe");
         //Set where to search ChromeDriver
         System.setProperty("webdriver.chrome.driver", chromeDriver_path.getPath());
@@ -19,9 +19,9 @@ public class SeleniumExercise3 {
         System.out.println("Current URL: " + myDriver.getCurrentUrl());
         myDriver.get("https://espn.com.mx");
         System.out.println("Current URL: " + myDriver.getCurrentUrl());
-        System.out.println("Primer Back");
+        System.out.println("First Back");
         myDriver.navigate().back();
-        System.out.println("Segundo Back");
+        System.out.println("Second Back");
         myDriver.navigate().back();
         System.out.println("Current URL: " + myDriver.getCurrentUrl());
         System.out.println("Primer Fordward");

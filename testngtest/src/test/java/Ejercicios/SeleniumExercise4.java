@@ -29,7 +29,7 @@ public class SeleniumExercise4 {
             Thread.sleep(5000);
         }
         else {
-            System.out.println("El elemento no está habilitado");
+            System.out.println("Element not available");
         }
 
         //Close current Window

@@ -28,6 +28,7 @@ public class SeleniumHandsOn5 {
         WebElement email = driver.findElement(By.id("email"));
         WebElement password = driver.findElement(By.id("pass"));
         WebElement login_button = driver.findElement(By.id("loginbutton"));
+        WebElement search_bar;
 
 
         //Test Steps
@@ -39,7 +40,7 @@ public class SeleniumHandsOn5 {
 
         //Try to find the Element. If User and Password are invalid throws the exception
         try {
-            WebElement search_bar = driver.findElement(By.name("q"));
+            search_bar = driver.findElement(By.name("q"));
             search_bar.sendKeys("QA Minds");
             search_bar.submit();
         }

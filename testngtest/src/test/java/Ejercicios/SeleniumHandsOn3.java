@@ -17,6 +17,7 @@ public class SeleniumHandsOn3 {
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 
         //***** TEST PROPERTIES *****
+
         // Target Page
         driver.get("https://facebook.com");
         //Print Current URL
@@ -30,7 +31,8 @@ public class SeleniumHandsOn3 {
         WebElement password = driver.findElement(By.id("pass"));
         WebElement login_button = driver.findElement(By.id("loginbutton"));
 
-        //Test Steps
+        // ***** TEST STEPS *****
+
         email.sendKeys("loquesea@hotmail.com");
         password.sendKeys("loquesea123");
         login_button.click();
