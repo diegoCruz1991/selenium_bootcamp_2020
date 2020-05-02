@@ -14,7 +14,7 @@ public class BaseTest {
     @BeforeClass(alwaysRun = true)
     public void setUp() {
         // Define which browser to use
-        String browser = "chrome";
+        String browser = "firefox";
 
         // Get correct driver for desire browser
         myDriver = WebDriverFactory.getDriver(browser);
