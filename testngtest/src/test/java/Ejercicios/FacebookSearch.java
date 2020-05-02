@@ -18,7 +18,7 @@ public class FacebookSearch {
         WebElement btnLogin = myDriver.findElement(By.id("u_0_b"));
 
         txtEmail.sendKeys("cesar_i10@hotmail.com");
-        txtPass.sendKeys("AMATERATSU3");
+        txtPass.sendKeys("*******");
         btnLogin.click();
         Thread.sleep(1000);
         WebElement txtSearch = myDriver.findElement(By.name("q"));
