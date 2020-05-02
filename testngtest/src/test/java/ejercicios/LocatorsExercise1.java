@@ -24,7 +24,7 @@ public class LocatorsExercise1 {
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement firstProduct = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("lazy-load")));
+        WebElement firstProduct = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("main-title")));
         firstProduct.click();
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 
