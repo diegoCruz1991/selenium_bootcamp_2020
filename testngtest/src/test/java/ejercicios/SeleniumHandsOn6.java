@@ -23,8 +23,7 @@ public class SeleniumHandsOn6 {
         searchBox.sendKeys("Selenium");
 
 
-        List<WebElement> results = new ArrayList<>();
-                results.addAll(myDriver.findElements(By.id("search-results-disclaimers")));
+        List<WebElement> results = myDriver.findElements(By.id("search-results-disclaimers"));
 
                 for (WebElement a : results)
                   System.out.println(a);
