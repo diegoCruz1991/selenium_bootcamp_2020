@@ -55,6 +55,10 @@ public class HandsOn4 {
 
         firstProduct.click();
 
+//        List<WebElement> findProd = driver.findElements(By.className("class"));
+//        findProd.get(0)
+//        findProd.get(0).click()
+
         Thread.sleep(10000);
 
         driver.close();
