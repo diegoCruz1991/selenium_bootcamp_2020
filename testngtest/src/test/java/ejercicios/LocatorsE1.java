@@ -24,18 +24,19 @@ public class LocatorsE1 {
         searchButton.click();
 
         Thread.sleep(2000);
+// con los tres funciona
+       // List<WebElement> result =  myDriver.findElements(By.xpath("/html/body/main/div/div/section/ol/li"));
+       // System.out.println(result.size());
+       // result.get(0).click();
 
-        /*List<WebElement> result =  myDriver.findElements(By.xpath("/html/body/main/div[1]/div/section/ol"));
+
+      //  List<WebElement> result =  myDriver.findElements(By.cssSelector("#searchResults li"));
+      //  System.out.println(result.size());
+      //  result.get(0).click();
+
+        List<WebElement> result =  myDriver.findElements(By.className("main-title"));
         System.out.println(result.size());
-        result.get(0).click();
-
-        System.out.println(result.size());*/
-
-
-        List<WebElement> result =  myDriver.findElements(By.cssSelector("#searchResults li"));
-        System.out.println(result.size());
-
-        result.get(0).click();
+        result.get(6).click();
 
         Thread.sleep(6000);
 
