@@ -38,7 +38,7 @@ public class LocatorsE1 {
         System.out.println(result.size());
         result.get(6).click();
 
-        Thread.sleep(6000);
+        Thread.sleep(3000);
 
         myDriver.close();
     }
