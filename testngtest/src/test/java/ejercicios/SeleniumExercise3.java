@@ -1,20 +1,24 @@
 package ejercicios;
-import java.io.File;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
+import utils.WebDriverFactory;
+import java.util.concurrent.TimeUnit;
+
 
 public class SeleniumExercise3 {
 
-    public static void main (String[] args){
+    public static void main (String[] args) throws InterruptedException {
 
-        File chromeFilePath = new File ("src/test/resources/drivers/chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", chromeFilePath.getPath());
-        WebDriver driver = new ChromeDriver();
-
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.get("http://www.youtube.com");
         System.out.println(driver.getCurrentUrl());
-        WebElement WebElement myElement = driver.findElement(By.xpath("//input[@id='search']"));
-        driver.findElement(By.xpath("//input[@id='search']")).sendKeys("Selenium");
+        driver.getTitle();
+        WebElement searchElem = driver.findElement(By.xpath("//input[@id='search']"));
+        searchElem.sendKeys("Selenium");
+        searchElem.submit();
+        Thread.sleep(1000);
+        driver.quit();
 
     }
 
