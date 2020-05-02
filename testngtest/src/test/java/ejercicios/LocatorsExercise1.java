@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.File;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class LocatorsExercise1 {
@@ -35,10 +36,16 @@ public class LocatorsExercise1 {
 
         myDriver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 
-        WebElement findFirstProd = myDriver.findElement(By.className("lazy-load"));
-        findFirstProd.click();
+        List<WebElement> findFrstProd = myDriver.findElements(By.className("main-title"));
+        findFrstProd.get(0).click();
 
-        Thread.sleep(3000);
+        System.out.println(findFrstProd.size());
+
+
+        //WebElement findFirstProd = myDriver.findElement(By.className("lazy-load"));
+        //findFirstProd.click();
+
+        Thread.sleep(5000);
 
         myDriver.close();
 
