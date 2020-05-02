@@ -16,7 +16,7 @@ public class SeleniumHandsOn3 {
         WebElement myElement = myDriver.findElement(By.id("email"));
         myElement.sendKeys("animerick-r2@hotmail.com");
         myElement = myDriver.findElement(By.id("pass"));
-        myElement.sendKeys("MyPassWordXD");
+        myElement.sendKeys("D!R@CK2015book");
         myElement = myDriver.findElement(By.id("loginbutton"));
         myElement.click();
 
