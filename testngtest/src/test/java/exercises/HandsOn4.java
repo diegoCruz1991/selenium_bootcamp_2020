@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utils.WebDriverFactory;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class HandsOn4 {
@@ -16,11 +17,7 @@ public class HandsOn4 {
         String searchBoxPath = "as_word";
         String searchButtonPath = "nav-search-btn";
         String postalCodePath = "//span[@class='andes-tooltip-button-close']";
-        String firstProductPath = "#item__image item__image--grid";
-                //*[contains(text(),'SelenioSelenium200Mcg90CapsulasAnticancerigenoEgS3')]";
-//ol[@id='searchResults']//li//div[@id='MLM770829615']";
-
-//li[@class='results-itemhighlightedarticlegriditem-info-height-185']/div[@class="rowItemitemhighlighteditem--gridnewto-item"]/div[@class="item__imageitem__image--grid"]
+        String firstProductPath = "main-title";
 
         WebDriver driver = new WebDriverFactory().getDriver("chrome");
 
@@ -46,20 +43,19 @@ public class HandsOn4 {
         postalCode = driver.findElement(By.xpath(postalCodePath));
         postalCode.click();
 
-        Thread.sleep(10000);
+        Thread.sleep(5000);
 
-        if (driver.findElement(By.cssSelector(firstProductPath)).isDisplayed()) {
-            System.out.println("Thefistproductispresent");
+        firstProduct = driver.findElement(By.className(firstProductPath));
+
+        if (firstProduct.isDisplayed()) {
+            System.out.println("The fist product is present");
         } else {
-            System.out.println("Thepathisnotpresent");
+            System.out.println("The path is not present");
         }
 
-        Thread.sleep(1000);
+        firstProduct.click();
 
-        firstProduct = driver.findElement(By.cssSelector(firstProductPath));
-        firstProduct.sendKeys(Keys.ENTER);
-
-        Thread.sleep(1000);
+        Thread.sleep(10000);
 
         driver.close();
     }
