@@ -27,10 +27,10 @@ public class SeleniumExercise6 {
         assert myDriver.getCurrentUrl().equals("www.facebook.com"): "No es la página de Facebook";
 
         WebElement email = myDriver.findElement(By.id("email"));
-        email.sendKeys("luisyairam.it@gmail.com");
+        email.sendKeys("luis@gmail.com");
 
         WebElement password = myDriver.findElement(By.id("pass"));
-        password.sendKeys("Luis123");
+        password.sendKeys("Luis123Fake");
 
         WebElement loginBtn = myDriver.findElement(By.id("loginbutton"));
         loginBtn.click();
