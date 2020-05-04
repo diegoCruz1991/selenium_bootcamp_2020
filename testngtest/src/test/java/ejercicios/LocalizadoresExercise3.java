@@ -5,7 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utils.WebDriverFactory;
 
-public class Prueba3 {
+
+public class LocalizadoresExercise3 {
+
     public static void main(String[] args) throws InterruptedException {
 
         WebDriver driver = WebDriverFactory.getDriver("chrome");
@@ -21,7 +23,5 @@ public class Prueba3 {
 
 
     }
-
-
 
 }
