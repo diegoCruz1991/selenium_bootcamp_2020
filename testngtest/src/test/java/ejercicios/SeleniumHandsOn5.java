@@ -19,7 +19,7 @@ public class SeleniumHandsOn5 {
         WebElement login = chrome.findElement(By.id("u_0_b"));
 
         correo.sendKeys("armando13mora@hotmail.com");
-        password.sendKeys("F750gs2020");
+        password.sendKeys("Test");
         login.click();
 
         Thread.sleep(10000);
