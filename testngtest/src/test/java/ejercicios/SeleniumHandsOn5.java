@@ -18,7 +18,7 @@ public class SeleniumHandsOn5 {
         loginbu.click();
         Thread.sleep(1000);
 
-        //Buscar QA Mings
+        //Buscar QA Minds
         WebElement searchElem = driver.findElement(By.xpath("//*[@id=\"u_r_2\"]/input[2]"));
         searchElem.sendKeys("QA Minds");
         searchElem.submit();
