@@ -23,7 +23,7 @@ public class SeleniumHands5 {
 
         //Escribe el password en el campo password
         WebElement passElement=myDriver.findElement(By.id("pass"));
-        passElement.sendKeys("Abril_1203");
+        passElement.sendKeys("Edith");
 
         // Da click en el login
         WebElement logElement=myDriver.findElement(By.id("loginbutton"));
