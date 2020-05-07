@@ -12,7 +12,7 @@ public class WebDriverFactory {
     public static WebDriver getDriver(String browser) {
         File rootPath = new File("src/test/resources/drivers");
         if(browser.toLowerCase().equals("chrome")) {
-            File chromeFilePath = new File(rootPath, "chromedriver");
+            File chromeFilePath = new File(rootPath, "chromedriver.exe");
             System.setProperty("webdriver.chrome.driver", chromeFilePath.getPath());
             return new ChromeDriver();
         } else if (browser.toLowerCase().equals("firefox")) {

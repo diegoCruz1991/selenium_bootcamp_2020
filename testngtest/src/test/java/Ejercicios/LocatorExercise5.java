@@ -48,6 +48,6 @@ public class LocatorExercise5 {
         Thread.sleep(5000);
 
         //Close current Window
-        driver.close();
+        //driver.close();
     }
 }
