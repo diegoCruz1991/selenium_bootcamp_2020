@@ -22,7 +22,11 @@ public class LocatorsExercise5 {
         WebElement dropDown = chrome.findElement(By.id("searchDropdownBox"));
         Select dropDownSelect = new Select(dropDown);
 
-       /* for (Select i: dropDownSelect) {
+        dropDownSelect.se
+
+        dropDownSelect.selectByVisibleText();
+
+       /for (Select i: dropDownSelect) {
             System.out.println(i.getAllSelectedOptions());
         }
 
@@ -33,6 +37,8 @@ public class LocatorsExercise5 {
         dropDownSelect.selectByIndex(0);
         System.out.println(dropDownSelect.selectByValue("search-alias=automotive"));
         }
+
+
 */
 
 
