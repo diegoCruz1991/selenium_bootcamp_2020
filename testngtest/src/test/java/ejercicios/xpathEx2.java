@@ -25,11 +25,8 @@ public class xpathEx2 {
         System.out.println(atriRole.size());
         List<WebElement> navclass= myDriver.findElements(By.xpath("//*[contains(@class, 'nav')]"));
         System.out.println(navclass.size());
-     //   List<WebElement> typenavclass= myDriver.findElements(By.xpath("//*[contains(@type, 'submit') and [@class, 'nav-input'])]"));
-       // System.out.println(typenavclass.size());
-
-
-
+        // List<WebElement> typenavclass= myDriver.findElements(By.xpath("//*[contains(@type, 'submit') and [@class, 'nav-input'])]"));
+        // System.out.println(typenavclass.size());
 
         myDriver.close();
     }

@@ -25,6 +25,7 @@ public class Exercise3 {
         myDriver.navigate().to("http://www.espn.com.mx");
         System.out.println("URL = " + myDriver.getCurrentUrl());
 
+
         Thread.sleep(2000);
 
         myDriver.navigate().back();

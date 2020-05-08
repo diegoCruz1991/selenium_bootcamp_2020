@@ -22,6 +22,7 @@ public class LocatorsE5 {
         WebElement searchDropbox = myDriver.findElement(By.id("searchDropdownBox"));
         Select drop = new Select(searchDropbox);
 
+
        for(WebElement opt:drop.getOptions()){
            opt.getText();
        }
