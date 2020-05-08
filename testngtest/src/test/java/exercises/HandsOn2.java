@@ -18,9 +18,9 @@ public class HandsOn2 {
 
         WebDriver driver = WebDriverFactory.getDriver("chrome");
 
-//google(driver,googleURL);
+        google(driver,googleURL);
         facebook(driver, facebookURL);
-//amazon(driver,amazonURL);
+        amazon(driver,amazonURL);
 
         driver.close();
     }
@@ -49,8 +49,8 @@ public class HandsOn2 {
         WebElement loginButton = driver.findElement(By.id("loginbutton"));
         WebElement searchBox;
 
-        correo.sendKeys("brandock4@gmail.com");
-        pass.sendKeys("F4c3b00ck");
+        correo.sendKeys("@gmail.com");
+        pass.sendKeys("12345");
         loginButton.click();
 
 
