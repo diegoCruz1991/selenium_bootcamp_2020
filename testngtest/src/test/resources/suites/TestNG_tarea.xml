@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PrimerXML_TestNG" verbose="1">
+    <test name="test1">
+        <classes>
+            <class name="ejercicios.testng.TestNGE1"></class>
+        </classes>
+    </test>
+</suite>
