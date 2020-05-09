@@ -4,13 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class XpathExercise2 {
+public class XpathExerciseExam {
 
     public static void main(String[] args) throws InterruptedException {
         File chromeFilePath = new File("src/test/resources/drivers/chromedriver.exe");
@@ -24,23 +23,15 @@ public class XpathExercise2 {
 
         myDriver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 
-        myDriver.get("https://www.amazon.com.mx/");
+        myDriver.get("https://es.wikipedia.org/wiki/Selenium");
 
         myDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        List<WebElement> xpathex = myDriver.findElements(By.xpath("//a"));
+        List<WebElement> xpathex = myDriver.findElements(By.xpath("//a[contains(text(),'selenium')]"));
         for (WebElement x : xpathex) {
             String text = x.getText();
             System.out.println("Todos los elementos de a: " + x.getText());
         }
-
-        List<WebElement> headlist = myDriver.findElements(By.xpath("//head/child::*"));
-        for (WebElement list : headlist) {
-            String text = list.getText();
-            System.out.println("Lista de elementos hijos de head: " + list.getText());
-        }
-        
-
         myDriver.close();
 
     }
