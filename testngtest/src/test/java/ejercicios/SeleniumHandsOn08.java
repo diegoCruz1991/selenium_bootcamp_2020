@@ -32,7 +32,7 @@ public class SeleniumHandsOn08 {
             driver.findElement(By.name("commit")).submit();
 
 
-            //Pagina de la Fauna Seleccionar a los Animalitos de la Creacion en Imprimirlo
+            //Pagina de la Fauna Seleccionar a los Animalitos de la Creacion e Imprimirlo
 
             //
 

@@ -14,7 +14,7 @@ public class animalesCategorias {
         driver.get("https://www.inaturalist.org/places");
 
         //Seleccionar Animales de las Categorias
-    
+
 
 
 
