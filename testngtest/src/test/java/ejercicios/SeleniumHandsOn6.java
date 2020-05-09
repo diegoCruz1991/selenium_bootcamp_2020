@@ -60,7 +60,9 @@ public class SeleniumHandsOn6 {
 
         System.out.println("The cheapest Product value is :" + cheapestProduct.getText());
 
+        cheapestProduct.click();
 
+        Thread.sleep(5000);
 
         driver.close();
 
