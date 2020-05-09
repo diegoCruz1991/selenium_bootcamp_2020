@@ -49,6 +49,7 @@ public class HandsOn2 {
             elementolista.click();
             Thread.sleep(1000);
             System.out.println("Tipo de ejemplares: "+nombres.get(i).getText());
+            
             i++;
             try {
                 WebElement element = driver.findElement(By.cssSelector("span[class='sciname']"));
