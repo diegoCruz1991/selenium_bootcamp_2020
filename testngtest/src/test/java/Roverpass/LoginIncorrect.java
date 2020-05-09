@@ -12,14 +12,14 @@ public class LoginIncorrect {
         WebDriver myDriver = WebDriverFactory.getDriver("chrome");
         myDriver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         myDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        myDriver.get("https://roverpass:r0vErsecret@dev.roverpass.com/admin/login");
+        myDriver.get("********");
 
         WebElement txtEmail = myDriver.findElement(By.id("session_form_email"));
         WebElement txtxPAssword = myDriver.findElement(By.id("session_form_password"));
         WebElement btnSingin = myDriver.findElement(By.name("commit"));
 
-        txtEmail.sendKeys("123@roverpass.com");
-        txtxPAssword.sendKeys("cesarcesar");
+        txtEmail.sendKeys("*******");
+        txtxPAssword.sendKeys("*******");
         btnSingin.click();
         Thread.sleep(3000);
 
