@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class SeleniumHandsOn08 {
     public static  void main (String[] args) throws InterruptedException {
         WebDriver driver = WebDriverFactory.getDriver("firefox");
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://www.inaturalist.org");
 
