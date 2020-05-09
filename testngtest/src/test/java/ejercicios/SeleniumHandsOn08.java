@@ -38,14 +38,14 @@ public class SeleniumHandsOn08 {
 
         for (WebElement a : allCat) {
             a.click();
-            System.out.println("Categorias de Animales: " + a.getText());
+            System.out.println("Categorias Especies:" + a.getText());
 
 
             try {
-                WebElement categoryElement = driver.findElement(By.xpath("//*[contains(@class,'name comname')]"));
-                System.out.println("Animal: " + categoryElement.getText() + " ");
+                WebElement animalCat = driver.findElement(By.xpath("//*[contains(@class,'name comname')]"));
+                System.out.println("Animal: " + animalCat.getText() + " ");
             } catch (Exception e) {
-                System.out.println("No hay Animales que mostrar");
+                System.out.println("No hay categorias por Mostrar");
 
             }
 
