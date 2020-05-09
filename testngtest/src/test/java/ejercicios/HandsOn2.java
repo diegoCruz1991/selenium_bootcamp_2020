@@ -38,20 +38,20 @@ public class HandsOn2 {
 
         WebElement searchc = myDriver.findElement(By.xpath("//input[@class='text']"));
         searchc.sendKeys("Colomos, Guadalajara");
-        searchc.sendKeys(Keys.ENTER); //Para simular entergit 
+        searchc.sendKeys(Keys.ENTER); //Para simular entergit
 
         Thread.sleep(6000);
 
 
         List<WebElement> submenu = myDriver.findElements(By.xpath("//a[contains(@class,'taxon')][starts-with(@href,'/places/colomos')]"));
-        System.out.println(submenu.get(0));
+        System.out.println(submenu.size());
 
         for(WebElement a : submenu) {
-            System.out.println(a.getText());
+            System.out.println("menu opcion " +a.getText());
             a.click();
 
             List<WebElement> birdopt = myDriver.findElements(By.xpath("//span[contains(@class,'comname')]"));
-            System.out.println(birdopt.get(0).getText());
+            System.out.println("pajarito " + birdopt.get(0).getText());
 
         }
 
