@@ -34,11 +34,24 @@ public class SeleniumHandsOn08 {
 
             //Pagina de la Fauna Seleccionar a los Animalitos de la Creacion e Imprimirlo
 
-            //
+        List<WebElement> allCat = driver.findElements(By.xpath("//*[@id='browsingtaxa']/ul/li/a"));
+
+        for (WebElement a : allCat) {
+            a.click();
+            System.out.println("Categorias de Animales: " + a.getText());
 
 
+            try {
+                WebElement categoryElement = driver.findElement(By.xpath("//*[contains(@class,'name comname')]"));
+                System.out.println("Animal: " + categoryElement.getText() + " ");
+            } catch (Exception e) {
+                System.out.println("No hay Animales que mostrar");
 
+            }
 
+        }
+
+    driver.quit();
 
     }
 
