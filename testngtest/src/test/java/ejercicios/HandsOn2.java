@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import utils.WebDriverFactory;
 
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class HandsOn2 {
@@ -42,6 +43,7 @@ public class HandsOn2 {
 
         Thread.sleep(6000);
 
+        Random r = new Random();
 
         List<WebElement> submenu = myDriver.findElements(By.xpath("//a[contains(@class,'taxon')][starts-with(@href,'/places/colomos')]"));
         System.out.println(submenu.size());
@@ -51,11 +53,9 @@ public class HandsOn2 {
             a.click();
 
             List<WebElement> birdopt = myDriver.findElements(By.xpath("//span[contains(@class,'comname')]"));
-            System.out.println("pajarito " + birdopt.get(0).getText());
+            System.out.println("pajarito " + birdopt.get(r.nextInt(birdopt.size())).getText());
 
         }
-
-
         myDriver.close();
     }
 }
