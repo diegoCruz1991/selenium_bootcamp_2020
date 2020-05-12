@@ -2,7 +2,7 @@ package google.elements;
 
 import org.openqa.selenium.WebElement;
 
-public class BaseElement {
+public abstract class BaseElement {
 
     protected WebElement rootElement;
 

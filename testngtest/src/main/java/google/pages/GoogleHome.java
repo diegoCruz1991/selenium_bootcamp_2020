@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -25,18 +24,17 @@ public class GoogleHome extends BasePage {
     private WebElement seacrhInGoogleButton;
 
     public GoogleHome(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(driver, this);
+        super(driver, driver.getCurrentUrl());
     }
 
-    public GoogleResultsPage searchInGoogle(String seacrhTxt) {
-        searchBox.sendKeys(seacrhTxt);
+    public GoogleResultsPage searchInGoogle(String searchTxt) {
+        searchBox.sendKeys(searchTxt);
         seacrhInGoogleButton.click();
         return new GoogleResultsPage(driver);
     }
 
-    public GoogleResultsPage searchInGoogleFeelingLucky(String seacrhTxt) {
-        searchBox.sendKeys(seacrhTxt);
+    public GoogleResultsPage searchInGoogleFeelingLucky(String searchTxt) {
+        searchBox.sendKeys(searchTxt);
         feelingLuckyButton.click();
         return new GoogleResultsPage(driver);
     }
@@ -48,6 +46,8 @@ public class GoogleHome extends BasePage {
             wait.until(ExpectedConditions.visibilityOf(doddle));
             return true;
         } catch(RuntimeException exception) {
+            System.out.println("Error: Pagina no Cargo " + exception);
+            //logger.error(exception);
             return false;
         }
     }
