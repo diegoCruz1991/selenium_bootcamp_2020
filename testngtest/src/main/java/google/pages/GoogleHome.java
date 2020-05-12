@@ -25,7 +25,7 @@ public class GoogleHome extends BasePage {
     private WebElement seacrhInGoogleButton;
 
     public GoogleHome(WebDriver driver) {
-        super(driver);
+        super(driver,driver.getCurrentUrl());//url http://www.google.com
         PageFactory.initElements(driver, this);
     }
 
@@ -48,6 +48,8 @@ public class GoogleHome extends BasePage {
             wait.until(ExpectedConditions.visibilityOf(doddle));
             return true;
         } catch(RuntimeException exception) {
+            System.out.println("Error pagina no cargo " + exception);
+            //logger.error(exception);
             return false;
         }
     }

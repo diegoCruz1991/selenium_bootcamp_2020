@@ -30,13 +30,15 @@ public class GoogleResultsPage extends BasePage {
     private WebElement prevButton;
 
     public GoogleResultsPage(WebDriver driver) {
-        super(driver);
+        super(driver, driver.getCurrentUrl());
         PageFactory.initElements(driver, this);
         initResults();
     }
 
     private List<GoogleResultItem> initResults() {
         List<WebElement> results = driver.findElements(By.xpath("//*[@class='srg']//*[@class='g']"));
+
+        resultItems = new ArrayList<>();
 
         for(WebElement element : results) {
             resultItems.add(new GoogleResultItem(element));
