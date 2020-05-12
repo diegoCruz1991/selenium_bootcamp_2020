@@ -21,8 +21,8 @@ public abstract class BasePage {
     public BasePage(WebDriver driver, String baseURL) {
         this.driver = driver;
         this.baseURL = baseURL;
-        PageFactory.initElements(driver, this);
         initSections();
+        PageFactory.initElements(driver, this);
     }
 
     private void initSections() {

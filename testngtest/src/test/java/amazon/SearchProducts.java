@@ -9,9 +9,9 @@ public class SearchProducts extends BaseTest {
 
     @Test(description = "Buscar un producto en amazon")
     public void searchProduct() {
-        AmazonMainPage mainPage = new AmazonMainPage(this.myDriver);
+        AmazonMainPage.open(this.myDriver);
 
-        mainPage.open();
+        AmazonMainPage mainPage = new AmazonMainPage(this.myDriver);
 
         Assert.assertTrue(mainPage.isLoaded(), "La pagina de Amazon no funciona");
 
