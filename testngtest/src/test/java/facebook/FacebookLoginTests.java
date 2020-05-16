@@ -9,9 +9,9 @@ public class FacebookLoginTests extends BaseTest {
 
     @Test()
     public void validateLoginPage() {
-        this.myDriver.get(PropertyReader.getProperty("test.properties", "TEST_URL"));
+        this.driver.get(PropertyReader.getProperty("test.properties", "TEST_URL"));
 
-        FacebookLoginPage facebookLoginPage = new FacebookLoginPage(this.myDriver);
+        FacebookLoginPage facebookLoginPage = new FacebookLoginPage(this.driver);
 
         //facebookLoginPage.goToLoginPage().getBaseURL();
     }

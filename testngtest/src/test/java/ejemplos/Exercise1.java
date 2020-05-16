@@ -7,14 +7,14 @@ public class Exercise1 extends BaseTest {
 
     @Test(alwaysRun = true)
     public void validateGoogleURL() {
-        myDriver.get("https://www.google.com");
-        Assert.assertEquals(myDriver.getCurrentUrl(), "https://www.google.com/");
+        driver.get("https://www.google.com");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.google.com/");
     }
 
     @Test(alwaysRun = true)
     public void validateGoogleButton() {
-        myDriver.get("https://www.google.com");
-        Assert.assertEquals(myDriver.getCurrentUrl(), "https://www.google.com/");
+        driver.get("https://www.google.com");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.google.com/");
     }
 
 }

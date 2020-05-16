@@ -9,7 +9,7 @@ import utils.WebDriverFactory;
 
 public class BaseTest {
 
-    protected WebDriver myDriver;
+    protected WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
     public void setUp() {
@@ -17,12 +17,12 @@ public class BaseTest {
         String browser = "chrome";
 
         // Get correct driver for desire browser
-        myDriver = WebDriverFactory.getDriver(browser);
+        driver = WebDriverFactory.getDriver(browser);
     }
 
     @AfterClass(alwaysRun = true)
     public void tearDown() {
-        myDriver.close();
-        myDriver.quit();
+        driver.close();
+        driver.quit();
     }
 }

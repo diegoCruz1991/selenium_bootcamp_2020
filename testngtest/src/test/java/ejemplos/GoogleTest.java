@@ -9,18 +9,18 @@ public class GoogleTest extends BaseTest {
 
     @Test(alwaysRun = true, priority = 0)
     public void validateGoogleURL() {
-        myDriver.get(GoogleHome.BASE_URL);
+        driver.get(GoogleHome.BASE_URL);
 
-        GoogleHome home = new GoogleHome(myDriver);
+        GoogleHome home = new GoogleHome(driver);
 
-        Assert.assertEquals(myDriver.getCurrentUrl(), GoogleHome.BASE_URL);
+        Assert.assertEquals(driver.getCurrentUrl(), GoogleHome.BASE_URL);
 
         Assert.assertTrue(home.isLoaded(), "Google page is not loaded");
     }
 
     @Test(alwaysRun = true, priority = 1)
     public void searchSomething() {
-        GoogleHome home = new GoogleHome(myDriver);
+        GoogleHome home = new GoogleHome(driver);
 
         GoogleResultsPage resultsPage = home.searchInGoogle("Selenium");
 
@@ -31,10 +31,10 @@ public class GoogleTest extends BaseTest {
 
     @Test(priority = 2, dependsOnMethods = {"searchSomething"})
     public void clickOnResultByTitle() throws InterruptedException {
-        GoogleResultsPage resultsPage = new GoogleResultsPage(myDriver);
+        GoogleResultsPage resultsPage = new GoogleResultsPage(driver);
 
         resultsPage.clickOnResultByTitle("Selenium - Wikipedia, la enciclopedia libre");
 
-        Assert.assertEquals(myDriver.getCurrentUrl(), "https://es.wikipedia.org/wiki/Selenium", "First result is wrong");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://es.wikipedia.org/wiki/Selenium", "First result is wrong");
     }
 }

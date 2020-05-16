@@ -10,7 +10,7 @@ public class GoogleResultItem extends BaseElement {
     }
 
     private WebElement title() {
-        return this.rootElement.findElement(By.xpath("//h3[@class='r']"));
+        return this.rootElement.findElement(By.xpath("//div[@class='r']//h3"));
     }
 
     private String description() {

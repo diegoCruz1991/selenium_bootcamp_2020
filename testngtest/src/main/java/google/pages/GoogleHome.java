@@ -25,18 +25,17 @@ public class GoogleHome extends BasePage {
     private WebElement seacrhInGoogleButton;
 
     public GoogleHome(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(driver, this);
+        super(driver,driver.getCurrentUrl());
     }
 
-    public GoogleResultsPage searchInGoogle(String seacrhTxt) {
-        searchBox.sendKeys(seacrhTxt);
+    public GoogleResultsPage searchInGoogle(String searchTxt) {
+        searchBox.sendKeys(searchTxt);
         seacrhInGoogleButton.click();
         return new GoogleResultsPage(driver);
     }
 
-    public GoogleResultsPage searchInGoogleFeelingLucky(String seacrhTxt) {
-        searchBox.sendKeys(seacrhTxt);
+    public GoogleResultsPage searchInGoogleFeelingLucky(String searchTxt) {
+        searchBox.sendKeys(searchTxt);
         feelingLuckyButton.click();
         return new GoogleResultsPage(driver);
     }
