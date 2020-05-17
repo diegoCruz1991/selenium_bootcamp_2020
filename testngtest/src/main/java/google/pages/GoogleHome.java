@@ -7,6 +7,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import sun.lwawt.macosx.CPrinterDevice;
 
 public class GoogleHome extends BasePage {
 
@@ -22,21 +23,20 @@ public class GoogleHome extends BasePage {
     private WebElement feelingLuckyButton;
 
     @FindBy(how = How.NAME, using = "btnK")
-    private WebElement seacrhInGoogleButton;
+    private WebElement searchInGoogleButton;
 
     public GoogleHome(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(driver, this);
+        super(driver, driver.getCurrentUrl());
     }
 
-    public GoogleResultsPage searchInGoogle(String seacrhTxt) {
-        searchBox.sendKeys(seacrhTxt);
-        seacrhInGoogleButton.click();
+    public GoogleResultsPage searchInGoogle(String searchTxt) {
+        searchBox.sendKeys(searchTxt);
+        searchInGoogleButton.click();
         return new GoogleResultsPage(driver);
     }
 
-    public GoogleResultsPage searchInGoogleFeelingLucky(String seacrhTxt) {
-        searchBox.sendKeys(seacrhTxt);
+    public GoogleResultsPage searchInGoogleFeelingLucky(String searchTxt) {
+        searchBox.sendKeys(searchTxt);
         feelingLuckyButton.click();
         return new GoogleResultsPage(driver);
     }
@@ -48,6 +48,8 @@ public class GoogleHome extends BasePage {
             wait.until(ExpectedConditions.visibilityOf(doddle));
             return true;
         } catch(RuntimeException exception) {
+            System.out.println("Error pagina no cargo: "+ exception);
+            //logger.error(exception)
             return false;
         }
     }
