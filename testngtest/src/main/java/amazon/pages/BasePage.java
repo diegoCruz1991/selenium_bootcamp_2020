@@ -20,7 +20,15 @@ public class BasePage {
         this.driver = driver;
         this.baseURL = baseURL;
 
-        PageFactory.initElements(driver,);
+        initSections();
+
+        PageFactory.initElements(driver, this);
+
+    }
+
+    private void initSections(){
+
+        if(this.isLoaded())
         topNavigationMenu = new  TopNavMenu(driver);
 
         mainbody = new MainBody(driver);

@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AmazonMainPage extends BasePage {
 
+    private static final String AMAZON_MAIN_PAGE = "https://www.amazon.com.mx/";
 
     public AmazonMainPage(WebDriver driver){
         super(driver,driver.getCurrentUrl());
@@ -33,6 +34,12 @@ public class AmazonMainPage extends BasePage {
         return new AmazonResultsPage(this.driver);
 
     }
+
+    public static void open(WebDriver driver) {
+
+        driver.get(AMAZON_MAIN_PAGE);
+    }
+
 
     @Override
     public boolean isLoaded(){
