@@ -30,13 +30,15 @@ public class GoogleResultsPage extends BasePage {
     private WebElement prevButton;
 
     public GoogleResultsPage(WebDriver driver) {
-        super(driver);
+        super(driver,driver.getCurrentUrl());
         PageFactory.initElements(driver, this);
         initResults();
     }
 
     private List<GoogleResultItem> initResults() {
-        List<WebElement> results = driver.findElements(By.xpath("//*[@class='srg']//*[@class='g']"));
+        List<WebElement> results = driver.findElements(By.xpath("//div[@id = 'search']//div[contains(@class,'g')]/div[@class='rc']"));
+
+        resultItems=new ArrayList<>();
 
         for(WebElement element : results) {
             resultItems.add(new GoogleResultItem(element));
@@ -54,7 +56,7 @@ public class GoogleResultsPage extends BasePage {
     public String clickOnResultByIndex(int index) {
         if(index > 0) {
             GoogleResultItem resultItem = resultItems.get(index);
-            resultItem.click();
+            resultItem.clickOnTitle();
             return driver.getCurrentUrl();
         } else {
             return null;
@@ -66,7 +68,7 @@ public class GoogleResultsPage extends BasePage {
 
             if(resultItem.getDescription().contains(title)) {
                 System.out.println(title);
-                resultItem.click();
+                resultItem.clickOnTitle();
                 Thread.sleep(3000);
                 return driver.getCurrentUrl();
             }
