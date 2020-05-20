@@ -1,7 +1,7 @@
 package amazon.pages;
 
 import amazon.sections.Footer;
-import amazon.sections.MainBody;
+import amazon.sections.MainBodyHome;
 import amazon.sections.TopNavigationMenu;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -14,7 +14,7 @@ public abstract class BasePage {
 
     protected TopNavigationMenu topNavigationMenu;
 
-    protected MainBody mainBody;
+    protected MainBodyHome mainBodyHome;
 
     protected Footer footer;
 
@@ -28,7 +28,7 @@ public abstract class BasePage {
     private void initSections() {
         if (this.isLoaded()) {
             topNavigationMenu = new TopNavigationMenu(driver);
-            mainBody = new MainBody(driver);
+            mainBodyHome = new MainBodyHome(driver);
             footer = new Footer(driver);
         }
     }

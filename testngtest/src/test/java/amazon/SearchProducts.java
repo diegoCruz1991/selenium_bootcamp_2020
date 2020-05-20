@@ -1,6 +1,7 @@
 package amazon;
 
 import amazon.pages.AmazonMainPage;
+import amazon.pages.AmazonResultsPage;
 import ejemplos.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,6 +16,10 @@ public class SearchProducts extends BaseTest {
 
         Assert.assertTrue(mainPage.isLoaded(), "La pagina de Amazon no funciona");
 
-        mainPage.searchProductsBySection("Animal Crossing", "Videojuegos");
+        AmazonResultsPage amazonResultsPage = mainPage.searchProductsBySection("Animal Crossing", "Videojuegos");
+
+        amazonResultsPage.orderResultsBySortType("Precio: de más bajo a más alto");
+
+        System.out.println(amazonResultsPage.obtainResultsInformation());
     }
 }
