@@ -25,8 +25,8 @@ public class GoogleHome extends BasePage {
     private WebElement seacrhInGoogleButton;
 
     public GoogleHome(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(driver, this);
+        super(driver, driver.getCurrentUrl());
+
     }
 
     public GoogleResultsPage searchInGoogle(String seacrhTxt) {
