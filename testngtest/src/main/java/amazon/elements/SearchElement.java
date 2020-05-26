@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class SearchElement {
 
-    public class SearchElement extends BaseElement{
+    /*public class SearchElement extends BaseElement{
 
 
         public SearchElement(WebElement rootElement){
@@ -24,5 +24,5 @@ public class SearchElement {
         public WebElement searchButton(){
             return this.rootElement.findElement(By.xpath("//div[@id = 'nav-search']//input[@type = 'submit' and @class = 'nav-input']"));
         }
-    }
+    }*/
 }
