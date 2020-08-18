@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuiteExample1" verbose="1">
+    <test name="test1">
+        <parameter name="user_id" value="dcruz@gmail.com"></parameter>
+        <classes>
+            <class name="ejemplos.GoogleTest">
+                <methods>
+                    <parameter name="otro_parametro" value="otroParametro">
+                    </parameter>
+                    <include name="searchSomething"></include>
+                </methods>
+            </class>
+            <class name="ejemplos.GoogleTest">
+                <methods>
+                    <include name="validateGoogleURL"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

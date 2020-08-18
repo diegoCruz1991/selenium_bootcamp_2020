@@ -4,6 +4,7 @@ import google.pages.GoogleHome;
 import google.pages.GoogleResultsPage;
 import io.qameta.allure.*;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 import org.testng.annotations.Test;
 
@@ -12,11 +13,14 @@ import org.testng.annotations.Test;
 public class GoogleTest extends BaseTest {
 
     @Test(alwaysRun = true, priority = 0)
+    @Parameters({"user_id", "otro_parametro"})
     @Severity(SeverityLevel.BLOCKER)
     @Description("Check if the Page to be tested is the correct one")
     @Story("Get to Google Page")
     @Step("Go to Google")
-    public void validateGoogleURL() {
+    public void validateGoogleURL(String user_id, String otro_parametro) {
+        System.out.println(user_id);
+        System.out.println(otro_parametro);
         myDriver.get(GoogleHome.BASE_URL);
 
         GoogleHome home = new GoogleHome(myDriver);
@@ -31,11 +35,14 @@ public class GoogleTest extends BaseTest {
     }
 
     @Test(alwaysRun = true, priority = 1)
+    @Parameters({"user_id", "otro_parametro"})
     @Severity(SeverityLevel.BLOCKER)
     @Description("Search something in Google")
     @Story("Test Google Search")
     @Step("Search in Google Selenium")
-    public void searchSomething() {
+    public void searchSomething(String user_id, String otro_parametro) {
+        myDriver.get(GoogleHome.BASE_URL);
+
         GoogleHome home = new GoogleHome(myDriver);
 
         GoogleResultsPage resultsPage = home.searchInGoogle("Selenium");

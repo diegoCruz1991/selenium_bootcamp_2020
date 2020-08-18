@@ -17,11 +17,12 @@ public class Assertion {
 
         //assert sumar(a, b) == expected: "La funcion suma no es correcta, esperaba 10";
 
-        assert sumar( 15, 10) == 8: "aseert 2";
+        assert "Hola".contains("d"): "Hola no contiene la letra d";
+
+        assert sumar( 15, 10) == 25: "15 + 10 no es igual a 8"; //verificar que el metodo sumar(15,10) es igual a 8
     }
 
     public static int sumar(int a, int b) {
-        a = 20;
         return a + b;
     }
 

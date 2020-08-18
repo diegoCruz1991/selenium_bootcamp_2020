@@ -14,7 +14,7 @@ public class GoogleHome extends BasePage {
     @FindBy(how = How.ID, using = "hplogo")
     private WebElement doddle;
 
-    @FindBy(how = How.ID, using = "lst-ib")
+    @FindBy(how = How.NAME, using = "q")
     private WebElement searchBox;
 
     @FindBy(how = How.NAME, using = "btnI")

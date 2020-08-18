@@ -5,4 +5,17 @@
             <class name="ejemplos.GoogleTest"></class>
         </classes>
     </test>
+    <test name="test2">
+
+        <parameter name="" value=""></parameter>
+        <classes>
+            <class name="ejemplos.GoogleTest"></class>
+            <parameter name="user_ID" value="blabla"></parameter>
+        </classes>
+    </test>
+    <test name="test3">
+        <classes>
+            <class name="ejemplos.GoogleTest"></class>
+        </classes>
+    </test>
 </suite>

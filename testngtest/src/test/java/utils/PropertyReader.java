@@ -1,6 +1,5 @@
 package utils;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,7 +13,8 @@ public class PropertyReader {
         String propertyValue = null;
 
         try {
-            inputStream = new FileInputStream(fileName);
+            //inputStream = new FileInputStream(fileName);
+            inputStream = ClassLoader.getSystemResourceAsStream(fileName);//this.getClass().getClassLoader().getResourceAsStream(fileName);
             properties.load(inputStream);
             propertyValue = properties.getProperty(key);
         } catch (FileNotFoundException e) {
